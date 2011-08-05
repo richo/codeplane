@@ -25,8 +25,8 @@ module Codeplane
           If you're having a bad time, you can always contact us at team@codeplane.com.
 
           == Help
-             codeplane help                         #{"# list complete help".gray}
-             codeplane help [NAME]                  #{"# list help for specific command".gray}
+             codeplane help                         #{"# list complete help".cyan}
+             codeplane help [NAME]                  #{"# list help for specific command".cyan}
 
         TEXT
       end

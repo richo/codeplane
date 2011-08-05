@@ -4,7 +4,7 @@ module Codeplane
       def self.help
         Codeplane::CLI.stdout.write <<-TEXT.strip_heredoc
           == Credentials
-             codeplane setup                        #{"# save your username and API key to ~/.codeplane".gray}
+             codeplane setup                        #{"# save your username and API key to ~/.codeplane".cyan}
 
         TEXT
       end

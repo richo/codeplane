@@ -4,7 +4,7 @@ module Codeplane
       def self.help
         Codeplane::CLI.stdout.write <<-TEXT.strip_heredoc
           == Version
-             codeplane version                      #{"# display Codeplane's version".gray}
+             codeplane version                      #{"# display Codeplane's version".cyan}
 
         TEXT
       end
