@@ -4,9 +4,9 @@ module Codeplane
       def self.help
         Codeplane::CLI.stdout.write <<-TEXT.strip_heredoc
           == SSH public keys
-             codeplane auth:list                    #{"# list all public keys".gray}
-             codeplane auth:add [NAME] [FILE]       #{"# add public key located at FILE with the specified NAME".gray}
-             codeplane auth:remove [NAME]           #{"# remove public key identified by NAME".gray}
+             codeplane auth:list                    #{"# list all public keys".cyan}
+             codeplane auth:add [NAME] [FILE]       #{"# add public key located at FILE with the specified NAME".cyan}
+             codeplane auth:remove [NAME]           #{"# remove public key identified by NAME".cyan}
 
         TEXT
       end
@@ -21,7 +21,7 @@ module Codeplane
           "".tap do |s|
             s << key.name
             s << "  #{padding}"
-            s << "  # #{key.fingerprint}".gray
+            s << "  # #{key.fingerprint}".cyan
           end
         end.join("\n") << "\n"
       end

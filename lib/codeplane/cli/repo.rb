@@ -4,10 +4,10 @@ module Codeplane
       def self.help
         Codeplane::CLI.stdout.write <<-TEXT.strip_heredoc
           == Repository
-             codeplane repo:list                    #{"# list all accessible repositories".gray}
-             codeplane repo:add [NAME]              #{"# create a new repository called NAME".gray}
-             codeplane repo:remove [NAME]           #{"# remove repository called NAME".gray}
-             codeplane repo:info [NAME]             #{"# show info about matching repositories".gray}
+             codeplane repo:list                    #{"# list all accessible repositories".cyan}
+             codeplane repo:add [NAME]              #{"# create a new repository called NAME".cyan}
+             codeplane repo:remove [NAME]           #{"# remove repository called NAME".cyan}
+             codeplane repo:info [NAME]             #{"# show info about matching repositories".cyan}
 
         TEXT
       end
@@ -23,7 +23,7 @@ module Codeplane
             s << repo.name
             s << (repo.mine? ? " " : "*".yellow)
             s << padding << "    "
-            s << "# #{repo.uri}".gray
+            s << "# #{repo.uri}".cyan
           end
         end.join("\n") << "\n"
       end
