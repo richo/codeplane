@@ -58,6 +58,10 @@ module Codeplane
     # Will be send in every request.
     #
     attr_accessor :api_key
+
+    # Load the colors that the help text on the cli will
+    # displayed in
+    attr_accessor :colors
   end
 
   # Return API's endpoint.

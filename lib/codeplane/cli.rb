@@ -56,6 +56,7 @@ module Codeplane
       credentials = YAML.load_file(config_file)
       Codeplane.username = credentials[:username]
       Codeplane.api_key = credentials[:api_key]
+      Codeplane.colors = credentials[:colors]
     rescue Exception
       false
     end
