@@ -59,6 +59,10 @@ module Codeplane
     rescue Exception
       false
     end
+
+    def colors
+      credentials[:colors]
+    end
   end
 end
 
