@@ -58,6 +58,7 @@ module Codeplane
       Codeplane.api_key = credentials[:api_key]
       Codeplane.colors = credentials[:colors]
     rescue Exception
+      Codeplane.colors = :cyan
       false
     end
 
