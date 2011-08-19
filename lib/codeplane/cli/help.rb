@@ -25,14 +25,14 @@ module Codeplane
           If you're having a bad time, you can always contact us at team@codeplane.com.
 
           == Help
-             codeplane help                         #{"# list complete help".gray}
-             codeplane help [NAME]                  #{"# list help for specific command".gray}
+             codeplane help                         #{"# list complete help".send(Codeplane.colors)}
+             codeplane help [NAME]                  #{"# list help for specific command".send(Codeplane.colors)}
 
         TEXT
       end
       
       def skip_credentials?
-        true
+        false
       end
 
       def base
