@@ -4,9 +4,9 @@ module Codeplane
       def self.help
         Codeplane::CLI.stdout.write <<-TEXT.strip_heredoc
           == User collaboration
-             codeplane user:list [REPO]             #{"# list collaborators on given REPO".gray}
-             codeplane user:add [REPO] [EMAIL]      #{"# invite EMAIL to join REPO".gray}
-             codeplane user:remove [REPO] [EMAIL]   #{"# revoke permission for EMAIL on REPO".gray}
+             codeplane user:list [REPO]             #{"# list collaborators on given REPO".send(Codeplane.colors)}
+             codeplane user:add [REPO] [EMAIL]      #{"# invite EMAIL to join REPO".send(Codeplane.colors)}
+             codeplane user:remove [REPO] [EMAIL]   #{"# revoke permission for EMAIL on REPO".send(Codeplane.colors)}
 
         TEXT
       end
@@ -21,7 +21,7 @@ module Codeplane
           "".tap do |s|
             s << user.name
             s << padding << "    "
-            s << "# #{user.email}".gray
+            s << "# #{user.email}".send(Codeplane.colors)
           end
         end.join("\n") << "\n"
       end
