@@ -28,7 +28,7 @@ module Codeplane
           file << {
             :username => Codeplane.username,
             :api_key => Codeplane.api_key,
-            :colors => "black"
+            :colors => "cyan"
           }.to_yaml
         end
 

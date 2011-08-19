@@ -7,6 +7,7 @@ module Helpers
     Codeplane.configure do |config|
       config.username = "john"
       config.api_key = "abc"
+      config.colors = "cyan"
     end
   end
 

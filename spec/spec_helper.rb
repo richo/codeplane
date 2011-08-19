@@ -23,6 +23,7 @@ RSpec.configure do |config|
     Codeplane.configure do |config|
       config.username = nil
       config.api_key = nil
+      config.colors = 'cyan'
     end
   end
 end

@@ -19,6 +19,7 @@ describe Codeplane::CLI::Setup do
 
     Codeplane.username.should == "the_real_john"
     Codeplane.api_key.should == "some_api_key"
+    Codeplane.colors.should == "cyan"
   end
 
   it "makes API call" do
@@ -39,7 +40,7 @@ describe Codeplane::CLI::Setup do
     subject.base
 
     File.should be_file(Codeplane::CLI.config_file)
-    YAML.load_file(Codeplane::CLI.config_file).should == {:username => "the_real_john", :api_key => "some_api_key"}
+    YAML.load_file(Codeplane::CLI.config_file).should == {:username => "the_real_john", :api_key => "some_api_key", :colors => "cyan"}
     File.should_not be_world_writable(Codeplane::CLI.config_file)
     File.should_not be_world_readable(Codeplane::CLI.config_file)
   end
