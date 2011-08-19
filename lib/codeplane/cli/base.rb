@@ -23,7 +23,7 @@ module Codeplane
       end
 
       def run(command)
-        raise Codeplane::UnauthorizedError unless skip_credentials? || Codeplane::CLI.credentials?
+        raise Codeplane::UnauthorizedError unless Codeplane::CLI.credentials? || skip_credentials?
         self.class.help & exit(1) unless respond_to?(command)
         send(command)
       end

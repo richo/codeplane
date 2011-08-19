@@ -32,7 +32,7 @@ module Codeplane
       end
       
       def skip_credentials?
-        false
+        true
       end
 
       def base
