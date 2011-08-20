@@ -61,10 +61,6 @@ module Codeplane
       Codeplane.colors = :cyan
       false
     end
-
-    def colors
-      credentials[:colors]
-    end
   end
 end
 
